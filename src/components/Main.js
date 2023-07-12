@@ -2,7 +2,9 @@ import React from 'react';
 import Category from "./Category";
 import styled from "styled-components";
 import Header from "./Header";
+import {DATA} from "../assets/data/Data.js";
 import ChatLists from "./ChatLists";
+import ChatMembers from "./ChatMembers";
 
 const Main = () => {
   return (
@@ -12,7 +14,8 @@ const Main = () => {
       <ContainerBox>
         {/*<Header />*/}
         <Category />
-        <ChatLists />
+        <ChatLists data={DATA}/>
+        <ChatMembers />
       </ContainerBox>
       </BackgroundBox>
     </>
