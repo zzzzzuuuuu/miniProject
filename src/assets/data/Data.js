@@ -52,3 +52,11 @@ export const AllData = [
     img: IMG,
   }
   ];
+
+export const MembersData = [
+  { name: "수인이", img: IMG },
+  { name: "오빠", img: IMG },
+  { name: "감자", img: IMG },
+  { name: "고구마", img: IMG },
+  { name: "아기사자", img: IMG }
+];

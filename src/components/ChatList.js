@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ChatList = (props) => {
   const { name, content, time, img } = props.data;
-  console.log(props.data);
+  // console.log(props.data);
   return (
     <>
       <ChatPersonRoom>
