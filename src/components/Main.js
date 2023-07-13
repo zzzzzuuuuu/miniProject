@@ -2,7 +2,7 @@ import React from 'react';
 import Category from "./Category";
 import styled from "styled-components";
 import Header from "./Header";
-import {AllData, PinnedData} from "../assets/data/Data.js";
+import {AllData, MembersData, PinnedData} from "../assets/data/Data.js";
 import ChatLists from "./ChatLists";
 import ChatMembers from "./ChatMembers";
 
@@ -12,10 +12,9 @@ const Main = () => {
       <BackgroundBox>
         <Header />
       <ContainerBox>
-        {/*<Header />*/}
         <Category />
         <ChatLists pinnedData={PinnedData} allData={AllData}/>
-        <ChatMembers />
+        <ChatMembers members={MembersData} />
       </ContainerBox>
       </BackgroundBox>
     </>

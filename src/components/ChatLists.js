@@ -4,8 +4,8 @@ import ChatList from "./ChatList";
 const ChatLists = (props) => {
   const PinnedData = props.pinnedData;
   const AllData = props.allData;
-  console.log(PinnedData); // 왜 undefined지?
-  console.log(AllData);
+  // console.log(PinnedData); // 왜 undefined지?
+  // console.log(AllData);
   return (
     <>
       <ChatListsBox>
