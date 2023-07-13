@@ -1,4 +1,4 @@
-import IMG from "./images/profile.png";
+import IMG from "../images/profile.png";
 export const DATA = [
   {
     name: "사랑하는엄마🩷",
