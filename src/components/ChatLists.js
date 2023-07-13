@@ -10,7 +10,7 @@ const ChatLists = (props) => {
     <>
       <ChatListsBox>
         <MessageTitle>Messages</MessageTitle> {/*// 메시지 박스 만들어서 수정하기 버튼이랑 같이 넣기*/}
-        <ChatSearchInput></ChatSearchInput>
+        <ChatSearchInput placeholder={" 🔍 Search.."}></ChatSearchInput>
         <InfoMessage>📌 Pinned Message</InfoMessage>
         <MessageLists>
           {PinnedData.map((data, index) => (
@@ -47,12 +47,17 @@ const MessageTitle = styled.h3`
 `
 
 const ChatSearchInput = styled.input`
-  background-color: lightgray;
+  background-color: #ECECEC;
   width: 170px;
-  height: 28px;
+  height: 25px;
   border-radius: 5px;
   border: none;
   margin-left: 13px;
+  
+  &::placeholder {
+    color: #BDBDBD;
+    font-size: 11px;
+  }
 `
 
 const InfoMessage = styled.p`

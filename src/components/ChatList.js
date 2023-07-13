@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ChatList = (props) => {
-  const { name, content, time, img } = props.data;
+  const { name, content, time, img, count } = props.data;
   // console.log(props.data);
   return (
     <>
@@ -11,10 +11,9 @@ const ChatList = (props) => {
           <PersonName>{name}</PersonName>
           <MessageContent>{content}</MessageContent>
         </NameContentBox>
-        {/*<PersonName>{name}</PersonName>*/}
         <TimeBox>
           <Time>{time}</Time>
-          <MessageCount>1</MessageCount>
+          <MessageCount><Center>{count}</Center></MessageCount>
         </TimeBox>
       </ChatPersonRoom>
     </>
@@ -74,15 +73,23 @@ const Time = styled.p`
   font-size: 11px;
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 500;
 `
 
 const MessageCount = styled.div`
   width: 10px;
   height: 10px;
-  background: red;
+  // 배경색 조건부 색깔 지정해야함
+  background: ${(count) => count ? "red" : "white"};
   border-radius: 100%;
   color: white;
   font-size: 5px;
+  font-weight: 700;
   line-height: 10px;
   margin-top: 5px;
+`
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
