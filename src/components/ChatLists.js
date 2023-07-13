@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import ChatList from "./ChatList";
-// import {DATA} from "../assets/Data.js";
 
 const ChatLists = (props) => {
-  const DATA = props.data;
-  console.log(DATA); // 왜 undefined지?
+  const PinnedData = props.pinnedData;
+  const AllData = props.allData;
+  console.log(PinnedData); // 왜 undefined지?
+  console.log(AllData);
   return (
     <>
       <ChatListsBox>
@@ -12,12 +13,16 @@ const ChatLists = (props) => {
         <ChatSearchInput></ChatSearchInput>
         <InfoMessage>📌 Pinned Message</InfoMessage>
         <MessageLists>
-          {DATA.map((data, index) => (
+          {PinnedData.map((data, index) => (
             <ChatList data={data} key={index} />
           ))}
         </MessageLists>
         <InfoMessage>💌 All Message</InfoMessage>
-        <MessageLists></MessageLists>
+        <MessageLists>
+          {AllData.map((data, index) => (
+            <ChatList data={data} key={index} />
+          ))}
+        </MessageLists>
       </ChatListsBox>
     </>
   );
@@ -60,10 +65,10 @@ const InfoMessage = styled.p`
 `
 
 const MessageLists = styled.div`
-  margin-top: 5px;
+  margin-top: 8px;
   margin-bottom: 0;
   width: 200px;
   height: 180px;
-  background: lightpink;
-  border: 1px solid #ccc;
+  //background: lightpink;
+  //border: 1px solid #ccc;
 `

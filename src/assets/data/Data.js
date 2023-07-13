@@ -1,13 +1,13 @@
 import IMG from "../images/profile.png";
-export const DATA = [
+export const PinnedData = [
   {
-    name: "사랑하는엄마🩷",
+    name: "사랑하는엄마♥︎",
     content: "잘자",
     time: "23:43",
     img: IMG,
   },
   {
-    name: "사랑하는아빠🩷",
+    name: "사랑하는아빠︎︎♥︎︎",
     content: "~~^♡",
     time: "03:27",
     img: IMG,
@@ -20,32 +20,35 @@ export const DATA = [
   },
   {
     name: "우즈오빠",
-    content: "🧡💙",
+    content: "🧡",
     time: "08:05",
     img: IMG,
+  }
+  ];
+
+export const AllData = [
+  {
+    name: "효선이",
+    content: "지유야 디코하자",
+    time: "22:28",
+    img: IMG,
   },
-//   {
-//     name: "효선이",
-//     content: "지유야 디코하자",
-//     time: "22:28",
-//     img: IMG,
-//   },
-//   {
-//     name: "코난",
-//     content: "내 이름은 코난",
-//     time: "17:08",
-//     img: IMG,
-//   },
-//   {
-//     name: "어떤사람",
-//     content: "아 이제 친구가없다",
-//     time: "08:30",
-//     img: IMG,
-//   },
-//   {
-//     name: "토끼",
-//     content: "토끼는 귀여워",
-//     time: "08:09",
-//     img: IMG,
-//   }
-];
+  {
+    name: "코난",
+    content: "내 이름은 코난",
+    time: "17:08",
+    img: IMG,
+  },
+  {
+    name: "어떤사람",
+    content: "아 이제 친구가없다",
+    time: "08:30",
+    img: IMG,
+  },
+  {
+    name: "냥이",
+    content: "내 꿈은 사자야",
+    time: "08:09",
+    img: IMG,
+  }
+  ];
