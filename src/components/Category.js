@@ -45,7 +45,7 @@ const CategoryBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 7px;
+  //margin-left: 7px;
 `
 
 const IconBox = styled.div`
