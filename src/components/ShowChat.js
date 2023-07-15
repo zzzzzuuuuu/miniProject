@@ -31,16 +31,29 @@ const ShowChat = () => {
           <YourProfile src={PROFILE}/>
           <OpponentBox>
             <TextInfo>
-              <UserName>우즈오빠♥︎</UserName>
-              <SendTime> 05:00 PM</SendTime>
+              <UserName>TestUser︎</UserName>
+              <YourSendTime> 05:00 PM</YourSendTime>
             </TextInfo>
             <TextContentBox>안녕</TextContentBox>
-            <TextContentBox>잘자~</TextContentBox>
-            <TextContentBox>🧡</TextContentBox>
           </OpponentBox>
         </TalkBox>
 
-        <ShowChatList chatting={chat}/>
+        <TalkMyBox>
+          <MyBox>
+            <MyTextInfo>
+              <MySendTime> 05:01 PM</MySendTime>
+              <UserName>You</UserName>
+            </MyTextInfo>
+            <Right>
+              <TextContentBox>
+                <ShowChatList chatting={chat}/>
+              </TextContentBox>
+            </Right>
+          </MyBox>
+          <MyProfile src={PROFILE}/>
+        </TalkMyBox>
+
+        {/*<ShowChatList chatting={chat}/>*/}
       </ChattingRoom>
       <div>
         <input type="text" value={text} onChange={handleChatInput} placeholder="Type a message"/>
@@ -84,7 +97,9 @@ const TalkBox = styled.div`
   margin-top: 10px;
   display: flex;
 `
-
+const TalkMyBox = styled(TalkBox)`
+  justify-content: flex-end;
+`
 const Profile = styled.img`
   width: 30px;
   height: 30px;
@@ -92,20 +107,28 @@ const Profile = styled.img`
   margin-top: 13px;
 `
 const YourProfile = styled(Profile)`
+  margin-right: 5px;
   margin-left: 10px;
+`
+const MyProfile = styled(Profile)`
+  margin-right: 10px;
+  margin-left: 5px;
 `
 const OpponentBox = styled.div`
   width: 250px;
   background: gold;
-  //display: flex;
-  margin-left: 5px;
-  flex-wrap: wrap;
+`
+const MyBox = styled(OpponentBox)`
+  justify-content: flex-end;
 `
 // 상대방 이름, 메세지 보낸 시간
 const TextInfo = styled.div`
   display: flex;
   margin-bottom: 5px;
   background: lightcoral;
+`
+const MyTextInfo = styled(TextInfo)`
+  justify-content: flex-end;
 `
 const UserName = styled.p`
   color: black;
@@ -118,29 +141,29 @@ const SendTime = styled.p`
   color: black;
   font-size: 10px;
   font-weight: 400;
+`
+const YourSendTime = styled(SendTime)`
   margin: 10px 0 0 13px;
+`
+const MySendTime = styled(SendTime)`
+  margin: 10px 13px 0 0;
 `
 const TextContentBox = styled.div`
   background: white;
   border-radius: 5px;
   border: none;
   width: max-content; // 컨텐츠 내용 크기만큼 
+  height: max-content;
   justify-content: center;
   font-size: 11px;
   font-weight: 500;
   padding: 4px;
   margin-top: 5px;
 `
-
-// 내가 보내는 메시지
-const TalkMyBox = styled(TalkBox)`
+const Right = styled.div`
+  display: flex;
   justify-content: flex-end;
-`
-const MyProfile = styled(Profile)`
-  margin-right: 10px;
-`
-const MyBox = styled(OpponentBox)`
-  justify-content: flex-end;
+  flex-wrap: wrap;
 `
 
 // 사용자가 입력한 메시지를 출력함. chat이라는 state를 전달받음
