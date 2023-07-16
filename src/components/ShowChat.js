@@ -38,26 +38,7 @@ const ShowChat = () => {
             <TextContentBox>안녕</TextContentBox>
           </OpponentBox>
         </TalkBox>
-
-        {/*<TalkMyBox>*/}
-        {/*  <MyBox>*/}
-        {/*    <MyTextInfo>*/}
-        {/*      <MySendTime>*/}
-        {/*        /!*05:01 PM*!/*/}
-        {/*        <Clock format={'A HH:mm'} ticking={false} timezone={"Asia/Seoul"} />*/}
-        {/*      </MySendTime>*/}
-        {/*      <UserName>You</UserName>*/}
-        {/*    </MyTextInfo>*/}
-        {/*    <Right>*/}
-        {/*      <TextContentBox>*/}
         <ShowChatList chatting={chat}/>
-        {/*      </TextContentBox>*/}
-        {/*    </Right>*/}
-        {/*  </MyBox>*/}
-        {/*  <MyProfile src={PROFILE}/>*/}
-        {/*</TalkMyBox>*/}
-
-        {/*<ShowChatList chatting={chat}/>*/}
       </ChattingRoom>
       <SendBox>
         <WriteContentInput type="text" value={text} onChange={handleChatInput} placeholder="Type a message"/>
@@ -157,7 +138,7 @@ const TextContentBox = styled.div`
   border-radius: 5px;
   border: none;
   width: max-content; // 컨텐츠 내용 크기만큼 
-  height: max-content;
+  height: min-content;
   justify-content: center;
   font-size: 11px;
   font-weight: 500;
@@ -201,24 +182,22 @@ const ShowChatList = ({chatting}) => {
   return (
     chatting.map((chat, i) => {
       return (
-        <span key={i}>
-          <TalkMyBox>
-        <MyBox>
-          <MyTextInfo>
-            <MySendTime>
-              <Clock format={'A HH:mm'} ticking={false} timezone={"Asia/Seoul"}/>
-            </MySendTime>
-            <UserName>You</UserName>
-          </MyTextInfo>
-          <Right>
-            <TextContentBox>
-              <p>{chat}</p>
-            </TextContentBox>
-          </Right>
-        </MyBox>
-        <MyProfile src={PROFILE}/>
-      </TalkMyBox>
-         </span>
+        // <span key={i}>
+        <TalkMyBox>
+          <MyBox>
+            <MyTextInfo>
+              <MySendTime>
+                <Clock format={'A HH:mm'} ticking={false} timezone={"Asia/Seoul"}/>
+              </MySendTime>
+              <UserName>You</UserName>
+            </MyTextInfo>
+            <Right>
+              <TextContentBox>{chat}</TextContentBox>
+            </Right>
+          </MyBox>
+          <MyProfile src={PROFILE}/>
+        </TalkMyBox>
+        // </span>
       )
     })
   );
