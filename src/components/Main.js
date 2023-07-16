@@ -30,18 +30,17 @@ const BackgroundBox = styled.div`
   height: 100%;
   background: #E0E0E0;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
 `
 
 const ContainerBox = styled.div`
-  background: bisque;
-  width: 1000px;
-  height: 583px;
+  background: #ECECEC;
+  width: 900px;
+  height: 535px;
   display: flex;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   justify-content: center;
   align-items: center;
-  flex-direction: row; // 디폴트값이니 나중에 삭제
   border: 1px solid #E1E1E1;
 `
