@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const ChatList = (props) => {
   const { name, content, time, img, count } = props.data;
-  // console.log(props.data);
   return (
     <>
       <ChatPersonRoom>
@@ -13,7 +12,7 @@ const ChatList = (props) => {
         </NameContentBox>
         <TimeBox>
           <Time>{time}</Time>
-          <MessageCount><Center>{count}</Center></MessageCount>
+          {count && <MessageCount><Center>{count}</Center></MessageCount>}
         </TimeBox>
       </ChatPersonRoom>
     </>
@@ -33,23 +32,19 @@ const ProfileImgBox = styled.img`
   height: 30px;
   flex-direction: column;
   padding: 0 8px 5px 10px;
-  //background: bisque;
 `
 const NameContentBox = styled.div`
   display: flex;
   width: 100px;
   height: 50px;
   flex-direction: column;
-  //background: lightsalmon;
 `
 const TimeBox = styled.div`
   display: flex;
   width: 45px;
   height: 50px;
   flex-direction: column;
-  align-items: end; // flex-direction을 column으로 했으니 align-items
-  //margin-top: 0;
-  //background: black;
+  align-items: end;
   padding-right: 5px;
 `
 
@@ -79,11 +74,10 @@ const Time = styled.p`
 const MessageCount = styled.div`
   width: 10px;
   height: 10px;
-  // 배경색 조건부 색깔 지정해야함
-  background: ${(count) => count ? "red" : "white"};
+  background: red;
   border-radius: 100%;
   color: white;
-  font-size: 5px;
+  font-size: 10px;
   font-weight: 700;
   line-height: 10px;
   margin-top: 5px;
