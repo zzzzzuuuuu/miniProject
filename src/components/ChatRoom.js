@@ -16,15 +16,12 @@ const ChatRoom = () => {
             <PresentSituation>Mos Aditt Typing..</PresentSituation>
           </CompanyBox>
           <Addition>
-            <AdditionalImg src={FACETIME} />
-            <AdditionalImg src={CALL} />
-            <AdditionalImg src={MORE} />
+            <AdditionalImg src={FACETIME}/>
+            <AdditionalImg src={CALL}/>
+            <AdditionalImg src={MORE}/>
           </Addition>
         </ChatRoomTop>
-        {/*<ChattingRoom>*/}
-          {/*컴포넌트 생성후 불러오기 */}
-          <ShowChat />
-        {/*</ChattingRoom>*/}
+        <ShowChat />
       </ChatRoomBox>
     </>
   );
@@ -39,8 +36,6 @@ const ChatRoomBox = styled.div`
   border-radius: 10px;
   margin-left: 10px;
   display: flex;
-  //justify-content: center;
-  //background: lightpink;
   align-items: center;
   flex-direction: column;
 `
@@ -48,7 +43,6 @@ const ChatRoomBox = styled.div`
 const ChatRoomTop = styled.div`
   display: flex;
   justify-content: center;
-  //background: lightgreen;
 `
 
 const Logo = styled.img`
@@ -61,7 +55,6 @@ const Logo = styled.img`
 
 const CompanyBox = styled.div`
   width: 140px;
-  //background: lightgreen;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -82,7 +75,6 @@ const PresentSituation = styled.p`
 
 const Addition = styled.div`
   width: 150px;
-  //background: lightsalmon;
   display: flex;
   justify-content: end;
 `

@@ -11,10 +11,16 @@ const ShowChat = () => {
   const handleChatInput = (e) => {
     setText(e.target.value);
   }
+// 엔터키 눌렀을 때 전송
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmitBtn();
+    }
+  }
 
   // 전송버튼 클릭시 input의 변경된 값을 chat에 저장하고 input 초기화
   const handleSubmitBtn = () => {
-    const copyChat = [...chat];
+    const copyChat = [...chat]; // chat 배열 복사해서 copyChat에 할당
     if (text !== '') {
       copyChat.push(text);
       setChat(copyChat);
@@ -22,7 +28,7 @@ const ShowChat = () => {
     }
   }
 
-  return ( // 화면에 리턴되는 부분
+  return (
     <>
       <ChattingRoom>
         <ChatDateBox>
@@ -32,17 +38,18 @@ const ShowChat = () => {
           <YourProfile src={PROFILE}/>
           <OpponentBox>
             <TextInfo>
-              <UserName>TestUser︎</UserName>
+              <UserName>창민이</UserName>
               <YourSendTime>PM 05:00 </YourSendTime>
             </TextInfo>
-            <TextContentBox>안녕</TextContentBox>
+            <TextContentBox>안녀어엉</TextContentBox>
           </OpponentBox>
         </TalkBox>
         <ShowChatList chatting={chat}/>
       </ChattingRoom>
       <SendBox>
-        <WriteContentInput type="text" value={text} onChange={handleChatInput} placeholder="Type a message"/>
-        <SendButton type="button" onClick={handleSubmitBtn}>전송</SendButton>
+        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyPress={handleKeyPress}
+                           placeholder="Type a message"/>
+        <SendButton onClick={handleSubmitBtn}>전송</SendButton>
       </SendBox>
     </>
   );
@@ -58,10 +65,11 @@ const ChattingRoom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 `
 
 const ChatDateBox = styled.div`
-  background: deeppink;
+  background: white;
   width: 60px;
   height: 20px;
   border-radius: 10px;
@@ -73,12 +81,11 @@ const ChatDateBox = styled.div`
 const ChatDate = styled.p`
   color: black;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 `
 const TalkBox = styled.div`
   width: 100%;
   height: max-content;
-  background: orange;
   margin-top: 10px;
   display: flex;
 `
@@ -101,7 +108,6 @@ const MyProfile = styled(Profile)`
 `
 const OpponentBox = styled.div`
   width: 250px;
-  background: gold;
 `
 const MyBox = styled(OpponentBox)`
   justify-content: flex-end;
@@ -110,7 +116,6 @@ const MyBox = styled(OpponentBox)`
 const TextInfo = styled.div`
   display: flex;
   margin-bottom: 5px;
-  background: lightcoral;
 `
 const MyTextInfo = styled(TextInfo)`
   justify-content: flex-end;
@@ -123,7 +128,7 @@ const UserName = styled.p`
   margin-bottom: 0;
 `
 const SendTime = styled.p`
-  color: black;
+  color: #7B7B7B;
   font-size: 10px;
   font-weight: 400;
 `
@@ -137,7 +142,7 @@ const TextContentBox = styled.div`
   background: white;
   border-radius: 5px;
   border: none;
-  width: max-content; // 컨텐츠 내용 크기만큼 
+  width: max-content;
   height: min-content;
   justify-content: center;
   font-size: 11px;
@@ -156,7 +161,6 @@ const SendBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  //background: pink;
 `
 const WriteContentInput = styled.input`
   width: 303px;
@@ -166,6 +170,7 @@ const WriteContentInput = styled.input`
   background: #F0F0F0;
   margin-top: 10px;
   margin-right: 3px;
+  outline: none;
 `
 const SendButton = styled.button`
   width: 42px;
@@ -175,6 +180,7 @@ const SendButton = styled.button`
   background: #0071FF;
   color: white;
   margin-top: 10px;
+  cursor: pointer;
 `
 
 // 사용자가 입력한 메시지를 출력함. chat이라는 state를 전달받음
@@ -182,7 +188,6 @@ const ShowChatList = ({chatting}) => {
   return (
     chatting.map((chat, i) => {
       return (
-        // <span key={i}>
         <TalkMyBox>
           <MyBox>
             <MyTextInfo>
@@ -197,7 +202,6 @@ const ShowChatList = ({chatting}) => {
           </MyBox>
           <MyProfile src={PROFILE}/>
         </TalkMyBox>
-        // </span>
       )
     })
   );
