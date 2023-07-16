@@ -14,9 +14,9 @@ const Category = () => {
         <IconBox>
           <CategoryIcon src={CALL}/>
         </IconBox>
-        <IconBox>
+        <SelectedIconBox>
           <CategoryIcon src={MESSAGE}/>
-        </IconBox>
+        </SelectedIconBox>
         <IconBox>
           <CategoryIcon src={PHONEBOOK}/>
         </IconBox>
@@ -51,12 +51,15 @@ const CategoryBox = styled.div`
 const IconBox = styled.div`
   width: 40px;
   height: 40px;
-  background: #2972FF; // 선택되었을때 / 아닐때 색깔 삼항연산자 설정하기
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
   border-radius: 12px;
+`
+const SelectedIconBox = styled(IconBox)`
+  background: #2972FF; // 선택되었을때 / 아닐때 색깔 삼항연산자 설정하기
+
 `
 
 const CategoryIcon = styled.img`
