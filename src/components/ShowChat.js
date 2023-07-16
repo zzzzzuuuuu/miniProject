@@ -28,7 +28,7 @@ const ShowChat = () => {
     }
   }
 
-  return ( // 화면에 리턴되는 부분
+  return (
     <>
       <ChattingRoom>
         <ChatDateBox>
@@ -47,7 +47,8 @@ const ShowChat = () => {
         <ShowChatList chatting={chat}/>
       </ChattingRoom>
       <SendBox>
-        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyPress={handleKeyPress} placeholder="Type a message"/>
+        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyPress={handleKeyPress}
+                           placeholder="Type a message"/>
         <SendButton onClick={handleSubmitBtn}>전송</SendButton>
       </SendBox>
     </>
@@ -141,7 +142,7 @@ const TextContentBox = styled.div`
   background: white;
   border-radius: 5px;
   border: none;
-  width: max-content; 
+  width: max-content;
   height: min-content;
   justify-content: center;
   font-size: 11px;
@@ -187,7 +188,6 @@ const ShowChatList = ({chatting}) => {
   return (
     chatting.map((chat, i) => {
       return (
-        // <span key={i}>
         <TalkMyBox>
           <MyBox>
             <MyTextInfo>
@@ -202,7 +202,6 @@ const ShowChatList = ({chatting}) => {
           </MyBox>
           <MyProfile src={PROFILE}/>
         </TalkMyBox>
-        // </span>
       )
     })
   );
