@@ -12,7 +12,7 @@ const Header = () => {
           <HideIcon/>
           <FullIcon/>
         </IconBox>
-        <InputUrl/>
+        <InputUrl />
         <ActiveBox>
           <ActiveIcon src={SHARE} />
           <ActiveIcon src={PLUS} />
@@ -27,7 +27,7 @@ export default Header;
 
 const HeaderBar = styled.div`
   background: white;
-  width: 830px;
+  width: 900px;
   height: 35px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -77,7 +77,6 @@ const ActiveBox = styled.div`
   margin-right: 10px;
   display: flex;
   align-items: center;
-  //background: blue;
 `
 
 const ActiveIcon = styled.img`
