@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import ChatList from "./ChatList";
+import WRITE from "../assets/images/icon_write.png";
 
 const ChatLists = (props) => {
   const PinnedData = props.pinnedData;
   const AllData = props.allData;
-  // console.log(PinnedData); // 왜 undefined지?
-  // console.log(AllData);
   return (
     <>
       <ChatListsBox>
-        <MessageTitle>Messages</MessageTitle> {/*// 메시지 박스 만들어서 수정하기 버튼이랑 같이 넣기*/}
-        <ChatSearchInput placeholder={" 🔍 Search.."}></ChatSearchInput>
+        <MessageTop>
+          <MessageTitle>Messages</MessageTitle>
+          <WriteMessage src={WRITE}/>
+        </MessageTop>
+        <ChatSearchInput placeholder={" 🔍 Search..."}></ChatSearchInput>
         <InfoMessage>📌 Pinned Message</InfoMessage>
         <MessageLists>
           {PinnedData.map((data, index) => (
@@ -36,14 +38,25 @@ const ChatListsBox = styled.div`
   background: white;
   border-radius: 10px;
   margin-left: 10px;
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
+`
+
+const MessageTop = styled.div`
+  display: flex;
+  padding: 20px 0 15px 0;
+  justify-content: center;
 `
 
 const MessageTitle = styled.h3`
   color: #226BD8;
-  margin-left: 23px;
+  font-size: 18px;
+  font-weight: 750;
+  margin: 3px 30px 0 0;
+`
+
+const WriteMessage = styled.img`
+  width: 20px;
+  height: 20px;
+  margin: 4px 0 0 25px;
 `
 
 const ChatSearchInput = styled.input`
@@ -74,6 +87,4 @@ const MessageLists = styled.div`
   margin-bottom: 0;
   width: 200px;
   height: 180px;
-  //background: lightpink;
-  //border: 1px solid #ccc;
 `
