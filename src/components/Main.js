@@ -5,6 +5,7 @@ import Header from "./Header";
 import {AllData, MembersData, PinnedData} from "../assets/data/Data.js";
 import ChatLists from "./ChatLists";
 import ChatMembers from "./ChatMembers";
+import ChatRoom from "./ChatRoom";
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <ContainerBox>
         <Category />
         <ChatLists pinnedData={PinnedData} allData={AllData}/>
+        <ChatRoom />
         <ChatMembers members={MembersData} />
       </ContainerBox>
       </BackgroundBox>
@@ -33,9 +35,8 @@ const BackgroundBox = styled.div`
 `
 
 const ContainerBox = styled.div`
-  //background-color: #F8F8F8;
   background: bisque;
-  width: 830px;
+  width: 1000px;
   height: 583px;
   display: flex;
   border-radius: 10px;
