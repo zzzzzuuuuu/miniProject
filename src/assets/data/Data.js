@@ -5,24 +5,28 @@ export const PinnedData = [
     content: "잘자",
     time: "23:43",
     img: IMG,
+    count: 1,
   },
   {
     name: "사랑하는아빠︎︎♥︎︎",
     content: "~~^♡",
     time: "03:27",
     img: IMG,
+    count: 2,
   },
   {
     name: "창민이",
     content: "안녀어엉",
     time: "11:05",
     img: IMG,
+    count: 1,
   },
   {
     name: "우즈오빠",
     content: "🧡",
     time: "08:05",
     img: IMG,
+    count: 3,
   }
   ];
 
