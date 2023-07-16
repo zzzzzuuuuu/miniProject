@@ -38,10 +38,10 @@ const ShowChat = () => {
           <YourProfile src={PROFILE}/>
           <OpponentBox>
             <TextInfo>
-              <UserName>TestUser︎</UserName>
+              <UserName>창민이</UserName>
               <YourSendTime>PM 05:00 </YourSendTime>
             </TextInfo>
-            <TextContentBox>안녕</TextContentBox>
+            <TextContentBox>안녀어엉</TextContentBox>
           </OpponentBox>
         </TalkBox>
         <ShowChatList chatting={chat}/>
@@ -128,7 +128,7 @@ const UserName = styled.p`
   margin-bottom: 0;
 `
 const SendTime = styled.p`
-  color: black;
+  color: #7B7B7B;
   font-size: 10px;
   font-weight: 400;
 `
