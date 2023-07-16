@@ -7,27 +7,22 @@ const ShowChat = () => {
   const [text, setText] = useState('');
   const [chat, setChat] = useState([]);
 
-  // input의 폼이 변경된 값 저장
   const handleChatInput = (e) => {
     setText(e.target.value);
   }
-// 엔터키 눌렀을 때 전송
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       handleSubmitBtn();
     }
   }
-
-  // 전송버튼 클릭시 input의 변경된 값을 chat에 저장하고 input 초기화
   const handleSubmitBtn = () => {
-    const copyChat = [...chat]; // chat 배열 복사해서 copyChat에 할당
+    const copyChat = [...chat];
     if (text !== '') {
       copyChat.push(text);
       setChat(copyChat);
       setText('');
     }
   }
-
   return (
     <>
       <ChattingRoom>
@@ -39,7 +34,7 @@ const ShowChat = () => {
           <OpponentBox>
             <TextInfo>
               <UserName>창민이</UserName>
-              <YourSendTime>PM 05:00 </YourSendTime>
+              <YourSendTime>AM 11:05 </YourSendTime>
             </TextInfo>
             <TextContentBox>안녀어엉</TextContentBox>
           </OpponentBox>
@@ -112,7 +107,6 @@ const OpponentBox = styled.div`
 const MyBox = styled(OpponentBox)`
   justify-content: flex-end;
 `
-// 상대방 이름, 메세지 보낸 시간
 const TextInfo = styled.div`
   display: flex;
   margin-bottom: 5px;
@@ -182,8 +176,6 @@ const SendButton = styled.button`
   margin-top: 10px;
   cursor: pointer;
 `
-
-// 사용자가 입력한 메시지를 출력함. chat이라는 state를 전달받음
 const ShowChatList = ({chatting}) => {
   return (
     chatting.map((chat, i) => {
@@ -200,7 +192,7 @@ const ShowChatList = ({chatting}) => {
               <TextContentBox>{chat}</TextContentBox>
             </Right>
           </MyBox>
-          <MyProfile src={PROFILE}/>
+          <MyProfile src={PROFILE} />
         </TalkMyBox>
       )
     })

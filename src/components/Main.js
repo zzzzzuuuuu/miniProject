@@ -11,13 +11,13 @@ const Main = () => {
   return (
     <>
       <BackgroundBox>
-        <Header />
-      <ContainerBox>
-        <Category />
-        <ChatLists pinnedData={PinnedData} allData={AllData}/>
-        <ChatRoom />
-        <ChatMembers members={MembersData} />
-      </ContainerBox>
+        <Header/>
+        <ContainerBox>
+          <Category/>
+          <ChatLists pinnedData={PinnedData} allData={AllData}/>
+          <ChatRoom/>
+          <ChatMembers members={MembersData}/>
+        </ContainerBox>
       </BackgroundBox>
     </>
   );

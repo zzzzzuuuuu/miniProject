@@ -31,7 +31,6 @@ const HeaderBar = styled.div`
   height: 35px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  //margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;

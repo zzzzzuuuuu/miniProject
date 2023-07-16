@@ -45,7 +45,6 @@ const CategoryBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  //margin-left: 7px;
 `
 
 const IconBox = styled.div`
@@ -58,7 +57,7 @@ const IconBox = styled.div`
   border-radius: 12px;
 `
 const SelectedIconBox = styled(IconBox)`
-  background: #2972FF; // 선택되었을때 / 아닐때 색깔 삼항연산자 설정하기
+  background: #2972FF;
 
 `
 
@@ -71,5 +70,5 @@ const CategoryIcon = styled.img`
 const MyProfileImg = styled.img`
   width: 30px;
   height: 30px;
-  margin-top: 105px; // 다른 방식으로 표현하기
+  margin-top: 105px;
 `
