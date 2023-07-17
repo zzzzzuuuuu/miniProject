@@ -16,10 +16,10 @@ const ShowChat = () => {
     }
   }
   const handleSubmitBtn = () => {
-    const copyChat = [...chat];
+    setChat([text, ...chat]);
     if (text !== '') {
-      copyChat.push(text);
-      setChat(copyChat);
+      chat.push(text);
+      setChat(chat);
       setText('');
     }
   }
