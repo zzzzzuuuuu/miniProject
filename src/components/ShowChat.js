@@ -42,7 +42,7 @@ const ShowChat = () => {
         <ShowChatList chatting={chat}/>
       </ChattingRoom>
       <SendBox>
-        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyPress={handleKeyPress}
+        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyDown={handleKeyPress}
                            placeholder="Type a message"/>
         <SendButton onClick={handleSubmitBtn}>전송</SendButton>
       </SendBox>
