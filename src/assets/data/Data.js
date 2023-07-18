@@ -1,6 +1,7 @@
 import IMG from "../images/profile.png";
 export const PinnedData = [
   {
+    id: 355,
     name: "사랑하는엄마♥︎",
     content: "잘자",
     time: "23:43",
@@ -8,6 +9,7 @@ export const PinnedData = [
     count: 1,
   },
   {
+    id: 373,
     name: "사랑하는아빠︎︎♥︎︎",
     content: "~~^♡",
     time: "03:27",
@@ -15,6 +17,7 @@ export const PinnedData = [
     count: 2,
   },
   {
+    id: 115,
     name: "창민이",
     content: "안녀어엉",
     time: "11:05",
@@ -22,6 +25,7 @@ export const PinnedData = [
     count: 1,
   },
   {
+    id: 805,
     name: "우즈오빠",
     content: "🧡",
     time: "08:05",
@@ -32,24 +36,28 @@ export const PinnedData = [
 
 export const AllData = [
   {
+    id: 782,
     name: "효선이",
     content: "지유야 디코하자",
     time: "22:28",
     img: IMG,
   },
   {
+    id: 504,
     name: "코난",
     content: "내 이름은 코난",
     time: "17:08",
     img: IMG,
   },
   {
+    id: 101,
     name: "어떤사람",
     content: "아 이제 친구가없다",
     time: "08:30",
     img: IMG,
   },
   {
+    id: 327,
     name: "냥이",
     content: "내 꿈은 사자야",
     time: "08:09",

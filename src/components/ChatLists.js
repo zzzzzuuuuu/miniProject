@@ -15,14 +15,14 @@ const ChatLists = (props) => {
         <ChatSearchInput placeholder={" 🔍 Search..."}></ChatSearchInput>
         <InfoMessage>📌 Pinned Message</InfoMessage>
         <MessageLists>
-          {PinnedData.map((data, index) => (
-            <ChatList data={data} key={index} />
+          {PinnedData.map((data, id) => (
+            <ChatList data={data} key={id} />
           ))}
         </MessageLists>
         <InfoMessage>💌 All Message</InfoMessage>
         <MessageLists>
-          {AllData.map((data, index) => (
-            <ChatList data={data} key={index} />
+          {AllData.map((data, id) => (
+            <ChatList data={data} key={id} />
           ))}
         </MessageLists>
       </ChatListsBox>
