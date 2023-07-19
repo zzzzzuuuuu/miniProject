@@ -15,14 +15,14 @@ const ChatLists = (props) => {
         <ChatSearchInput placeholder={" 🔍 Search..."}></ChatSearchInput>
         <InfoMessage>📌 Pinned Message</InfoMessage>
         <MessageLists>
-          {PinnedData.map((data, index) => (
-            <ChatList data={data} key={index} />
+          {PinnedData.map((data, id) => (
+            <ChatList data={data} key={id} />
           ))}
         </MessageLists>
         <InfoMessage>💌 All Message</InfoMessage>
         <MessageLists>
-          {AllData.map((data, index) => (
-            <ChatList data={data} key={index} />
+          {AllData.map((data, id) => (
+            <ChatList data={data} key={id} />
           ))}
         </MessageLists>
       </ChatListsBox>
@@ -35,7 +35,7 @@ export default ChatLists;
 const ChatListsBox = styled.div`
   width: 200px;
   height: 517px;
-  background: white;
+  background: ${(props) => props.theme.colors.WHITE};
   border-radius: 10px;
   margin-left: 10px;
 `
@@ -47,7 +47,7 @@ const MessageTop = styled.div`
 `
 
 const MessageTitle = styled.h3`
-  color: #226BD8;
+  color: ${(props) => props.theme.colors.BLUE};
   font-size: 18px;
   font-weight: 750;
   margin: 3px 30px 0 0;
@@ -60,7 +60,7 @@ const WriteMessage = styled.img`
 `
 
 const ChatSearchInput = styled.input`
-  background-color: #ECECEC;
+  background-color: ${(props) => props.theme.colors.LIGHTGRAY};
   width: 170px;
   height: 25px;
   border-radius: 5px;
@@ -68,14 +68,14 @@ const ChatSearchInput = styled.input`
   margin-left: 13px;
   
   &::placeholder {
-    color: #BDBDBD;
+    color: ${(props) => props.theme.colors.MORE};
     font-size: 11px;
   }
 `
 
 const InfoMessage = styled.p`
   font-size: 10px;
-  color: #CCCCCC;
+  color: ${(props) => props.theme.colors.MORE};
   font-weight: 600;
   margin-left: 10px;
   margin-top: 5px;

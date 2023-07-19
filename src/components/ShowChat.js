@@ -16,10 +16,10 @@ const ShowChat = () => {
     }
   }
   const handleSubmitBtn = () => {
-    const copyChat = [...chat];
+    setChat([text, ...chat]);
     if (text !== '') {
-      copyChat.push(text);
-      setChat(copyChat);
+      chat.push(text);
+      setChat(chat);
       setText('');
     }
   }
@@ -42,7 +42,7 @@ const ShowChat = () => {
         <ShowChatList chatting={chat}/>
       </ChattingRoom>
       <SendBox>
-        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyPress={handleKeyPress}
+        <WriteContentInput type="text" value={text} onChange={handleChatInput} onKeyDown={handleKeyPress}
                            placeholder="Type a message"/>
         <SendButton onClick={handleSubmitBtn}>전송</SendButton>
       </SendBox>

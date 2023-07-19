@@ -66,7 +66,7 @@ export default ChatMembers;
 const MembersBox = styled.div`
   width: 200px;
   height: 517px;
-  background: white;
+  background: ${(props) => props.theme.colors.WHITE};
   border-radius: 10px;
   margin-left: 10px;
 `
@@ -90,7 +90,7 @@ const CompanyTitle = styled.h3`
   margin-bottom: 0;
 `
 const CompanyInfo = styled.p`
-  color: #C0C0C0;
+  color: ${(props) => props.theme.colors.MORE};
   font-size: 11px;
   margin-top: 3px;
   margin-bottom: 0;
@@ -115,14 +115,14 @@ const AddIcon = styled.div`
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  background: #DEDEDE;
-  color: #2B74E0;
+  background: ${(props) => props.theme.colors.LIGHTGRAY};
+  color: ${(props) => props.theme.colors.BLUE};
   font-weight: 600;
   font-size: 20px;
   margin-left: -45px;
 `
 const AddPerson = styled.p`
-  color: #2B74E0;
+  color: ${(props) => props.theme.colors.BLUE};
   font-size: 12px;
   font-weight: 530;
   margin-left: 7px;
@@ -154,13 +154,13 @@ const AttachTextBox = styled.div`
 const AttachTitle = styled.p`
   font-size: 11px;
   font-weight: 500;
-  color: black;
+  color: ${(props) => props.theme.colors.BLACK};
   margin: 0;
 `
 const AttachContent = styled.p`
   font-size: 10px;
   font-weight: 400;
-  color: #7F7F7F;
+  color: ${(props) => props.theme.colors.CONTENT};
   margin-top: -1px;
   margin-bottom: 0;
 `
