@@ -32,7 +32,7 @@ export default ChatRoom;
 const ChatRoomBox = styled.div`
   width: 370px;
   height: 517px;
-  background: white;
+  background: ${(props) => props.theme.colors.WHITE};
   border-radius: 10px;
   margin-left: 10px;
   display: flex;
@@ -68,7 +68,7 @@ const CompanyName = styled.h3`
 `
 const PresentSituation = styled.p`
   font-size: 11px;
-  color: #83B6A5;
+  color: ${(props) => props.theme.colors.GREEN};
   font-weight: 600;
   margin-top: 5px;
 `

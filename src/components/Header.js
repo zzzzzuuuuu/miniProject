@@ -26,7 +26,7 @@ const Header = () => {
 export default Header;
 
 const HeaderBar = styled.div`
-  background: white;
+  background: ${(props) => props.theme.colors.WHITE};
   width: 900px;
   height: 35px;
   border-top-right-radius: 10px;
@@ -51,7 +51,7 @@ const BasicIcon = styled.div`
 `
 
 const CloseIcon = styled(BasicIcon)`
-  background: red;
+  background: ${(props) => props.theme.colors.RED};
 `
 
 const HideIcon = styled(BasicIcon)`
@@ -63,7 +63,7 @@ const FullIcon = styled(BasicIcon)`
 `
 
 const InputUrl = styled.input`
-  background: #DFDFDF;
+  background: ${(props) => props.theme.colors.LIGHTGRAY};
   width: 450px;
   height: 20px;
   border: none;

@@ -38,7 +38,7 @@ const Category = () => {
 export default Category;
 
 const CategoryBox = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.WHITE};
   width: 80px;
   height: 517px;
   border-radius: 10px;
@@ -57,12 +57,11 @@ const IconBox = styled.div`
   border-radius: 12px;
 `
 const SelectedIconBox = styled(IconBox)`
-  background: #2972FF;
+  background: ${(props) => props.theme.colors.BLUE};
 
 `
 
 const CategoryIcon = styled.img`
-  //background: deeppink;
   width: 25px;
   height: 25px;
 `

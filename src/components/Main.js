@@ -6,10 +6,12 @@ import {AllData, MembersData, PinnedData} from "../assets/data/Data.js";
 import ChatLists from "./ChatLists";
 import ChatMembers from "./ChatMembers";
 import ChatRoom from "./ChatRoom";
+import {ThemeProvider} from "styled-components";
+import {Theme} from "../styles/Theme";
 
 const Main = () => {
   return (
-    <>
+    <ThemeProvider theme={Theme}>
       <BackgroundBox>
         <Header/>
         <ContainerBox>
@@ -19,7 +21,7 @@ const Main = () => {
           <ChatMembers members={MembersData}/>
         </ContainerBox>
       </BackgroundBox>
-    </>
+    </ThemeProvider>
   );
 };
 

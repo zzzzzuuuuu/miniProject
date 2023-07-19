@@ -49,7 +49,7 @@ const TimeBox = styled.div`
 `
 
 const PersonName = styled.h4`
-  color: #444444;
+  color: ${(props) => props.theme.colors.NAME};
   font-size: 12px;
   font-weight: 800;
   margin-top: 0;
@@ -57,14 +57,14 @@ const PersonName = styled.h4`
 `
 
 const MessageContent = styled.p`
-  color: #8F8F8F;
+  color: ${(props) => props.theme.colors.CONTENT};
   font-size: 11px;
   font-weight: 650;
   margin-top: 0;
 `
 
 const Time = styled.p`
-  color: #C4C4C4;
+  color: ${(props) => props.theme.colors.TIME};
   font-size: 11px;
   margin-top: 0;
   margin-bottom: 0;
@@ -74,9 +74,9 @@ const Time = styled.p`
 const MessageCount = styled.div`
   width: 10px;
   height: 10px;
-  background: red;
+  background: ${(props) => props.theme.colors.RED};
   border-radius: 100%;
-  color: white;
+  color: ${(props) => props.theme.colors.WHITE};
   font-size: 10px;
   font-weight: 700;
   line-height: 10px;

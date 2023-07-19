@@ -26,7 +26,6 @@ const MembersBox = styled.div`
 const ProfileImgBox = styled.div`
   width: 30px;
   height: 30px;
-  //background: white;
   display: flex;
   flex-direction: column;
   margin-top: 1px;
@@ -41,14 +40,13 @@ const ProfileImg = styled.img`
 const NameBox = styled.div`
   width: 120px;
   height: 30px;
-  //background: bisque;
   display: flex;
   flex-direction: column;
   margin-top: 1px;
 `
 const MemberName = styled.p`
   font-size: 11.5px;
-  color: black;
+  color: ${(props) => props.theme.colors.BLACK};
   font-weight: 450;
   margin-top: 5px;
   margin-left: 5px;
