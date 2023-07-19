@@ -14,5 +14,3 @@ export const Theme = {
     MORE: '#BDBDBD',
   },
 };
-
-// ${(props) => props.theme.colors.
